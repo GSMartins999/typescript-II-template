@@ -49,3 +49,4 @@ function buscarPostsPorAutor(posts: Post[], autorInformado: string): Post[] {
   )
 }
 
+console.log(buscarPostsPorAutor(posts, "Dobby"));

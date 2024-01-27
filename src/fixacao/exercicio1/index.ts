@@ -13,15 +13,15 @@ que todos os objetos tenham as mesmas propriedades.
 
 //Fiquei com preguiça e coloquei apenas algumas cores aleatórias
 enum corFavo {
-  AZUL_MARINHO = "1a1e47",
-  VERMELHO = "e02b2b",
-  BRANCO = "ffffff"
+  AZUL_MARINHO = "azul",
+  VERMELHO = "vermelho",
+  BRANCO = "branco"
 }
 
-type carac = {
+export type carac = {
   nome: string,
   idade: number,
-  corFavorita: string
+  corFavorita: corFavo
 }
 
 const pessoa1: carac = {
@@ -33,7 +33,7 @@ const pessoa1: carac = {
 const pessoa2: carac = {
   nome: "Isa",
   idade: 19,
-  corFavorita: "Azul"
+  corFavorita: corFavo.BRANCO
 }
 
 const pessoa3: carac = {
@@ -41,3 +41,11 @@ const pessoa3: carac = {
   idade: 19,
   corFavorita: corFavo.VERMELHO
 }
+
+const Pessoas: carac[] = [
+  pessoa1,
+  pessoa2,
+  pessoa3
+]
+
+console.log(Pessoas)
